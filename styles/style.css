@@ -275,6 +275,7 @@ input::placeholder {
 
 .card__header {
   color: white;
+  position: relative;
 }
 
 .card__header p {
@@ -322,6 +323,13 @@ input::placeholder {
   .plan .plan__entry {
     font-size: 1.8rem;
   }
+}
+
+.card--popular-icon {
+  width: 40px;
+  position: absolute;
+  right: 5%;
+  top: -3%;
 }
 
 /* Media */
