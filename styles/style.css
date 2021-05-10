@@ -1,5 +1,5 @@
 :root {
-  --color-pramiry: #2584ff;
+  --color-primary: #2584ff;
   --color-secondary: #00d7fc;
   --color-accent: #ff3400;
   --color-heading: #210e6b;
@@ -88,7 +88,7 @@ a {
 }
 
 .badge--primary {
-  background-color: var(--color-pramiry);
+  background-color: var(--color-primary);
   color: white;
 }
 
@@ -99,6 +99,10 @@ a {
 
 .badge--small {
   font-size: 1.6rem;
+}
+
+.plan .badge--secondary {
+  background-color: #02cdf1;
 }
 
 @media screen and (min-width: 1024px) {
@@ -190,7 +194,8 @@ button {
 
 .list--tick .list__item {
   padding-left: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -207,7 +212,7 @@ button {
 }
 
 .icon--primary {
-  fill: var(--color-pramiry);
+  fill: var(--color-primary);
 }
 
 .icon-container {
@@ -252,5 +257,95 @@ input::placeholder {
 @media screen and (min-width: 1024px) {
   input {
     font-size: 1.5rem;
+  }
+}
+
+/* CARD */
+.card {
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 10px #f3f3f3;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.card__header,
+.card__body {
+  padding: 2rem 3rem;
+}
+
+.card__header {
+  color: white;
+}
+
+.card__header p {
+  margin: 0;
+}
+
+.card--primary .card__header {
+  background-color: var(--color-primary);
+}
+.card--secondary .card__header {
+  background-color: var(--color-secondary);
+}
+
+.plan .plan__entry {
+  color: white;
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.plan .plan__price {
+  font-size: 6rem;
+}
+
+.plan .plan__billing-cycle {
+  opacity: 80%;
+  font-size: 2.4rem;
+}
+
+.plan .plan__desc {
+  opacity: 80%;
+  display: block;
+  letter-spacing: 1px;
+}
+
+.plan .badge--small {
+  padding: 0.5rem 1rem;
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .plan .plan__price {
+    font-size: 5rem;
+  }
+  .plan .plan__entry {
+    font-size: 1.8rem;
+  }
+}
+
+/* Media */
+.media {
+  display: flex;
+}
+
+.media__header {
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.media--desc {
+  margin: 0 20px;
+}
+
+.media__body {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .media__header,
+  .media__body {
+    font-size: 1.8rem;
   }
 }
