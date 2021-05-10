@@ -132,6 +132,10 @@ button {
   cursor: pointer;
   white-space: nowrap;
 }
+.btn--streched {
+  padding-left: 60px;
+  padding-right: 60px;
+}
 
 .btn--heading,
 .btn--accent,
@@ -459,5 +463,38 @@ input::placeholder {
   .testomonials__quotes {
     right: -30px;
     padding: 5px;
+  }
+}
+
+/* CALLOUTS */
+.callout {
+  background: var(--color-primary);
+  color: white;
+  border-radius: 10px;
+  padding: 3rem;
+  text-align: center;
+}
+.callout__header {
+  color: white;
+  font-size: 4rem;
+  font-size: bold;
+}
+
+.callout__body {
+  font-size: 2.4rem;
+}
+
+.callout--button {
+  align-self: center;
+  justify-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  .callout__grid {
+    grid-template-columns: 1fr auto;
+  }
+  .callout--button {
+    padding: 0 4vw;
+    justify-self: start;
   }
 }
