@@ -160,7 +160,7 @@ button {
 }
 
 .list--tick {
-  list-style-image: url("../images/tick.svg");
+  list-style-image: url("../icons/tick.svg");
   padding-left: 3rem;
 }
 
@@ -173,4 +173,25 @@ button {
   .list--tick .list__item {
     padding-left: 0rem;
   }
+}
+
+/* ICONS */
+
+.icon {
+  height: 60px;
+  width: 60px;
+}
+
+.icon--primary {
+  fill: var(--color-pramiry);
+}
+
+.icon-container {
+  align-items: center;
+  background: #f3f9fa;
+  border-radius: 100%;
+  display: inline-flex;
+  height: 65px;
+  justify-content: center;
+  width: 65px;
 }
