@@ -121,29 +121,53 @@ button {
   border-radius: 20rem;
   font-weight: 600;
   font-size: 1.8rem;
-  margin: 4rem;
-  padding: 2.5rem 0;
-  width: 40rem;
+  margin: 2px 0;
+  padding: 2rem 3rem;
+  display: inline-block;
   text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn--heading,
+.btn--accent,
+.btn--secondary {
+  color: white;
 }
 
 .btn--heading {
   background-color: var(--color-heading);
-  color: white;
 }
-.btn--heading-light {
+
+.btn--heading:hover {
+  background-color: #27156b;
+}
+
+.btn--outline {
   border: 1px solid var(--color-heading);
   color: var(--color-heading);
 }
 .btn--accent {
   background-color: var(--color-accent);
-  color: white;
   font-weight: bold;
+}
+.btn--accent:hover {
+  background-color: #fd491b;
 }
 .btn--secondary {
   background-color: var(--color-secondary);
-  color: white;
   font-weight: bold;
+}
+
+.btn--block {
+  width: 100%;
+  display: inline-block;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
 }
 
 /* LISTS */
@@ -194,4 +218,39 @@ button {
   height: 65px;
   justify-content: center;
   width: 65px;
+}
+
+/* INPUTS */
+
+input {
+  border-radius: 70px;
+  color: var(--color-heading);
+  font-size: 2rem;
+  margin: 5px;
+  outline: none;
+  padding: 1.5rem 2rem;
+  width: 100%;
+}
+input::placeholder {
+  color: #8a898c;
+}
+.input-group {
+  border: 1px solid #eee;
+  border-radius: 70px;
+  box-shadow: 0px 0px 20px #eee;
+  display: flex;
+  outline: none;
+  margin: 10px;
+}
+
+.input-group input {
+  border: none;
+  margin: 0;
+  flex-grow: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  input {
+    font-size: 1.5rem;
+  }
 }
