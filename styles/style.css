@@ -207,10 +207,13 @@ button {
 /* ICONS */
 
 .icon {
-  height: 60px;
-  width: 60px;
+  height: 80px;
+  width: 80px;
 }
-
+.icon--small {
+  height: 30px;
+  width: 30px;
+}
 .icon--primary {
   fill: var(--color-primary);
 }
@@ -398,5 +401,63 @@ input::placeholder {
   .quotes__icon {
     position: relative;
     top: -15%;
+  }
+}
+
+/* GRIDS */
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 864px) {
+  .grid--1X2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* TESTOMONIALS */
+.testomonials {
+  padding: 35px;
+}
+.testomonials--image-section {
+  position: relative;
+}
+
+.testomonials__image {
+  width: 100%;
+}
+.testomonials__grid {
+  gap: 50px;
+}
+
+.testomonials__body {
+  display: flex;
+  align-items: center;
+}
+.testomonials__quotes {
+  position: absolute;
+  right: -20px;
+  /* padding: 5px; */
+  top: 8%;
+  background: var(--color-accent);
+}
+.testomonials__quotes svg {
+  fill: white;
+}
+.testomonials .quotes__icon {
+  top: -20px;
+}
+
+@media screen and (min-width: 864px) and (max-width: 1024px) {
+  .testomonials__body .quotes__text,
+  .testomonials__body .quotes__author {
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .testomonials__quotes {
+    right: -30px;
+    padding: 5px;
   }
 }
