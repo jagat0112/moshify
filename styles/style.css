@@ -222,6 +222,10 @@ button {
   fill: var(--color-primary);
 }
 
+.icon--white {
+  fill: white;
+}
+
 .icon-container {
   align-items: center;
   background: #f3f9fa;
@@ -497,4 +501,39 @@ input::placeholder {
     padding: 0 4vw;
     justify-self: start;
   }
+}
+
+/* Collapsible */
+
+.collapsible--header {
+  display: flex;
+  justify-content: space-between;
+}
+.collapsible__heading {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.collapsible__lists {
+  list-style: none;
+}
+
+.collapsible--icon {
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+}
+.collapsible--body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.collapsible--active .collapsible--icon {
+  transform: rotate(0deg);
+  transition: transform 0.3s;
+}
+
+.collapsible--active .collapsible--body {
+  max-height: 100vh;
+  transition: max-height 1s;
 }
