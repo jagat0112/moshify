@@ -5,6 +5,11 @@
   --color-heading: #210e6b;
   --color-body: #918ca4;
 }
+
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
 /* TOPOGRAPHY */
 html {
   font-size: 62.5%;
@@ -36,6 +41,7 @@ h2 {
 
 h3 {
   font-size: 3rem;
+  font-weight: 50rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -763,5 +769,101 @@ nav {
   }
   .block-plan .plan:hover {
     transform: scale(1.1);
+  }
+}
+
+/* Feature Block */
+
+.block-feature__header {
+  margin-top: 0;
+}
+
+.block-feature__photo {
+  width: 100%;
+  margin: 1rem auto;
+}
+.block-feature {
+  align-items: center;
+  gap: 4rem;
+  margin: 10rem auto;
+}
+
+@media screen and (min-width: 860px) {
+  .block-feature .icon-container,
+  .block-feature .icon--primary {
+    width: 3rem;
+    height: 3rem;
+  }
+  .block-feature:nth-of-type(even) .feature-content {
+    order: 2;
+  }
+  .block-feature {
+    margin: 4rem auto;
+  }
+}
+
+/* Control Panel */
+
+.control-panel {
+  background-color: black;
+  color: #7b858b;
+}
+
+.control-panel.block-skew-left {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+  padding-bottom: 20rem;
+}
+
+.control-panel .block__heading {
+  color: white;
+}
+.control-panel__img {
+  width: 100%;
+}
+
+.control-panel .media__header {
+  color: white;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .control-panel--content {
+    margin-top: 7rem;
+  }
+
+  .control-panel__media {
+    padding: 0;
+    align-self: center;
+  }
+
+  .control-panel__img-div {
+    justify-self: end;
+  }
+
+  .control-panel .grid {
+    gap: 5rem;
+    grid-template-columns: 50% 50%;
+  }
+  .control-panel__img {
+    padding: 0;
+    justify-self: end;
+  }
+  .control-panel__img {
+    width: auto;
+    max-width: 700px;
+  }
+
+  .control-panel__desc {
+    padding: 0rem;
+  }
+  .control-panel .media__header {
+    margin-bottom: 0rem;
+  }
+}
+
+@media screen and (min-width: 1090px) {
+  .control-panel.block-skew-left {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 85%);
+    padding-bottom: 20rem;
   }
 }
