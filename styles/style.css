@@ -242,10 +242,10 @@ button {
 input {
   border-radius: 70px;
   color: var(--color-heading);
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin: 5px;
   outline: none;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 4rem;
   width: 100%;
 }
 input::placeholder {
@@ -254,7 +254,7 @@ input::placeholder {
 .input-group {
   border: 1px solid #eee;
   border-radius: 70px;
-  box-shadow: 0px 0px 20px #eee;
+  box-shadow: 0px 0px 30px 20px #eee;
   display: flex;
   outline: none;
   margin: 10px;
@@ -282,7 +282,7 @@ input::placeholder {
 
 .card__header,
 .card__body {
-  padding: 2rem 3rem;
+  padding: 1rem 1.5rem;
 }
 
 .card__header {
@@ -307,14 +307,17 @@ input::placeholder {
   font-weight: bold;
   margin: 0;
 }
+.card--primary .badge--secondary {
+  background-color: #126de4;
+}
 
 .plan .plan__price {
-  font-size: 6rem;
+  font-size: 5rem;
 }
 
 .plan .plan__billing-cycle {
   opacity: 80%;
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 
 .plan .plan__desc {
@@ -335,12 +338,15 @@ input::placeholder {
   .plan .plan__entry {
     font-size: 1.8rem;
   }
+  .plan__desc {
+    font-size: 1.5rem;
+  }
 }
 
 .card--popular-icon {
   width: 40px;
   position: absolute;
-  right: 5%;
+  right: 2%;
   top: -3%;
 }
 
@@ -672,5 +678,90 @@ nav {
   }
   .hero__heading {
     align-self: center;
+  }
+}
+
+/* Block Domain */
+
+.block-domain__header {
+  text-align: center;
+}
+.block-domain__heading,
+.block-domain__text {
+  padding: 2rem 1rem;
+}
+.block-domain .input-group {
+  margin-top: 3rem;
+  margin: 2rem 1rem;
+}
+
+.block-domain__btn {
+  display: flex;
+}
+.block-domain__btn > p {
+  vertical-align: middle;
+}
+
+.domain-block__btn-text {
+  margin: auto 0;
+  padding-left: 7px;
+}
+
+.domain-block__grid2X3 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.domain-block__grid2X3 li {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-heading);
+  margin: 2rem 0;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 768px) {
+  .domain-block__grid2X3 {
+    grid-template-columns: repeat(6, 1fr);
+    max-width: 725px;
+    font-size: 1.5rem;
+  }
+  .domain-block__grid2X3 li,
+  .domain-block__grid2X3 li span {
+    font-size: 1.5rem;
+  }
+  .block-domain .input-group {
+    max-width: 680px;
+    margin: 2rem auto;
+  }
+}
+
+/* Plan Block */
+
+.block-plan .plan {
+  font-size: 2rem;
+  max-width: 490px;
+  transition: transform 0.4s;
+}
+.block-plan {
+  margin: 4rem auto;
+  display: grid;
+  gap: 4rem;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .block-plan {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .block-plan .plan:nth-child(2) {
+    transform: scale(1.05);
+  }
+  .block-plan .plan:hover {
+    transform: scale(1.1);
   }
 }
