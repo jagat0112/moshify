@@ -41,7 +41,7 @@ h2 {
 
 h3 {
   font-size: 3rem;
-  font-weight: 50rem;
+  font-weight: 500;
 }
 
 @media screen and (min-width: 1024px) {
@@ -527,7 +527,7 @@ input::placeholder {
 .callout__header {
   color: white;
   font-size: 4rem;
-  font-size: bold;
+  font-weight: bold;
 }
 
 .callout__body {
@@ -661,7 +661,7 @@ input::placeholder {
   text-align: center;
 }
 
-@media screen and (min-width: 1200) {
+@media screen and (min-width: 1200px) {
   .container {
     padding: 0;
   }
@@ -970,7 +970,7 @@ nav {
 
 /* Testomonials-block */
 .block--header {
-  padding: 1rem auto;
+  padding: 1rem;
 }
 .testomonials__card {
   max-width: 1140px;
@@ -1040,10 +1040,10 @@ nav {
     border: 0;
   }
 
-  .block__heading,
+  /* .block__heading,
   .footer__items {
     font-size: 1.6rem !important;
-  }
+  } */
 
   .footer--grid__wide {
     display: grid;
